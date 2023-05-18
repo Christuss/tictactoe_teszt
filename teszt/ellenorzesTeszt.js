@@ -224,14 +224,14 @@ QUnit.module("járéktér getAtlo tesztelése", function (hooks) {
             "X", "X", "X",
             "O", "O", "X",
             "X", "O", "O"];
-        assert.equal(jatekter.getAtlo(), "XOO@XOX@");
+        assert.equal(jatekter.getAtlo(), "XOO@XOX");
     });
 
     QUnit.test("az utolsó oszlopban és a következő sor elején van 2 elem", function (assert) {
         jatekter.lista = [
-            " ", "O", " ",
+            " ", "", "O",
             " ", " ", " ",
-            "X", " ", " "];
-        assert.equal(jatekter.getFuggoleges(), "  X@O  @   @");
+            " ", " ", "X"];
+        assert.equal(jatekter.getAtlo(), "  X@O  ");
     });
 })
